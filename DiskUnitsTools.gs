@@ -1,5 +1,6 @@
 /* @Ruzgfpegk - 20151214 */
 /* Perl-inspired notation: s_ for "scalars" (vars), a_ for "arrays". */
+/* Intended to be used in Google Spreadsheets, via Tools/Script Editor. */
 
 /**
  * Returns the size converted in any unit
