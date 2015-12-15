@@ -1,5 +1,5 @@
 /* @Ruzgfpegk - 20151215 */
-/* Perl-inspired notation: s_ for "scalars" (vars), a_ for "arrays". */
+/* Perl-inspired notation: s_ for "scalars" (vars), a_ for "arrays", h_ for "hashes". */
 /* Intended to be used in Google Spreadsheets, via Tools/Script Editor. */
 
 /**
@@ -14,15 +14,15 @@
 function UnitConvert(s_input, s_outunit) {
   s_input = s_input.toString(); // To make sure we can use ".replace".
   
-  var a_pow    = { 'B':0, 'KB':1, 'MB':2, 'GB':3, 'TB':4 };
+  var h_pow    = { 'B':0, 'KB':1, 'MB':2, 'GB':3, 'TB':4 };
   var s_inunit = s_input.slice(-2);
   var s_number = parseFloat( s_input.replace(',','.') );
   var s_final  = 0;
   
   s_inunit = s_inunit.trim();
   
-  if( a_pow.hasOwnProperty( s_inunit ) && a_pow.hasOwnProperty( s_outunit ) )
-  { s_final = s_number*Math.pow( 1024, a_pow[s_inunit]-a_pow[s_outunit] ) }
+  if( h_pow.hasOwnProperty( s_inunit ) && h_pow.hasOwnProperty( s_outunit ) )
+  { s_final = s_number*Math.pow( 1024, h_pow[s_inunit]-h_pow[s_outunit] ) }
   else
   { s_final = -1 }
   
