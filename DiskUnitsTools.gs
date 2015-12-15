@@ -38,14 +38,7 @@ function UnitConvert(s_input, s_outunit) {
  */
 
 function ToByte(s_input) {
-  s_input = s_input.toString(); // To be able to use .replace.
-
-  var s_number = parseFloat( s_input.replace(',','.') );
-  var s_final  = 0;
-
-  s_final = UnitConvert(s_input, 'B');
-  
-  return s_final;
+  return UnitConvert(s_input, 'B');
 }
 
 /**
