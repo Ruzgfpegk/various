@@ -53,12 +53,12 @@ function ToByte(s_input) {
 
 function PercentOfSize(s_total, s_used) {
   var a_original = [s_total, s_used]; // In whatever format
-  var a_final    = [];            // In bytes
+  var a_final    = [];                // In bytes
   
-  a_original.forEach(
+  a_final = a_original.map(
     function(s_value) {
-      a_final.push( ToByte(s_value) )
-    });
+      return ToByte(s_value)
+  });
   
   return a_final[1]/a_final[0];
 }
