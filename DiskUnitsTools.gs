@@ -1,12 +1,12 @@
-/* @Ruzgfpegk - 20151214 */
+/* @Ruzgfpegk - 20151215 */
 /* Perl-inspired notation: s_ for "scalars" (vars), a_ for "arrays". */
 /* Intended to be used in Google Spreadsheets, via Tools/Script Editor. */
 
 /**
  * Returns the size converted in any unit
  *
- * @param {text} input - The value to convert, including unit.
- * @param {text} unit - The output unit ('B', 'KB', 'MB', 'GB', 'TB').
+ * @param {string} input - The value to convert, including unit.
+ * @param {string} unit - The output unit ('B', 'KB', 'MB', 'GB', 'TB').
  * @return The input converted to bytes.
  * @customfunction
  */
@@ -32,7 +32,7 @@ function UnitConvert(s_input, s_outunit) {
 /**
  * Returns the size converted in bytes
  *
- * @param {text} input - The value to convert.
+ * @param {string} input - The value to convert.
  * @return The input converted to bytes.
  * @customfunction
  */
